@@ -1,4 +1,5 @@
-﻿using AutoMarket.API.Applications.Vehicle.Queries;
+﻿using AutoMarket.API.Applications.Vehicle.Commands;
+using AutoMarket.API.Applications.Vehicle.Queries;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,11 +13,19 @@ public static class VehicleEndpoints
 
         api.MapGet("/items", () => { return "hello"; });
         api.MapGet("{vehicleId:Guid}", GetVehicleAsync);
+        api.MapPost("/", CreateVehicleAsync);
 
         return api;
     }
 
-    public static async Task<Results<Ok<Vehicle>, NotFound>> GetVehicleAsync(Guid vehicleId, [FromServices] IVehicleQueries vehicleQueries)
+    private static async Task CreateVehicleAsync(CreateVehicleCommand createVehicleCommand,
+        [FromServices] IMediator mediator)
+    {
+        await mediator.Send(createVehicleCommand);
+    }
+
+    public static async Task<Results<Ok<Vehicle>, NotFound>> GetVehicleAsync(Guid vehicleId,
+        [FromServices] IVehicleQueries vehicleQueries)
     {
         var vehicle = await vehicleQueries.GetVehicleAsync(vehicleId);
         return TypedResults.Ok(vehicle);
