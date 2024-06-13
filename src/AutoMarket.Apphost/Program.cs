@@ -5,10 +5,14 @@ var db = builder.AddPostgres("postgres", port: 5432)
 
 var automarketdb = db.AddDatabase("automarketdb");
 
-builder.AddProject<Projects.AutoMarket_API>("apiService")
+var autoMarketApi = builder.AddProject<Projects.AutoMarket_API>("automarket-api")
     .WithReference(automarketdb);
 
 builder.AddProject<Projects.AutoMarket_DatabaseMigration>("dbMigration")
     .WithReference(automarketdb);
+
+builder.AddProject<Projects.AutoMarket_WebApp>("webApp")
+    .WithExternalHttpEndpoints()
+    .WithReference(autoMarketApi);
 
 builder.Build().Run();

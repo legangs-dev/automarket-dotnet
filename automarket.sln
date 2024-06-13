@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMarket.Infrastructure",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMarket.DatabaseMigration", "src\AutoMarket.DatabaseMigration\AutoMarket.DatabaseMigration.csproj", "{A0FCFD63-5BA1-4E19-A2D2-005EAAEAF239}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMarket.WebApp", "src\AutoMarket.WebApp\AutoMarket.WebApp.csproj", "{4CAD90C4-E15E-4F04-92EA-0C74197CBEA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{A0FCFD63-5BA1-4E19-A2D2-005EAAEAF239}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0FCFD63-5BA1-4E19-A2D2-005EAAEAF239}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0FCFD63-5BA1-4E19-A2D2-005EAAEAF239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CAD90C4-E15E-4F04-92EA-0C74197CBEA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CAD90C4-E15E-4F04-92EA-0C74197CBEA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CAD90C4-E15E-4F04-92EA-0C74197CBEA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CAD90C4-E15E-4F04-92EA-0C74197CBEA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{41CB0023-2761-4827-AA33-FE76B60EECC9} = {56ED6333-0F3B-4B4E-8E7F-425F62602392}
 		{874F044E-7ED7-4BC2-B5A4-CB2FB26BBF27} = {56ED6333-0F3B-4B4E-8E7F-425F62602392}
 		{A0FCFD63-5BA1-4E19-A2D2-005EAAEAF239} = {56ED6333-0F3B-4B4E-8E7F-425F62602392}
+		{4CAD90C4-E15E-4F04-92EA-0C74197CBEA0} = {56ED6333-0F3B-4B4E-8E7F-425F62602392}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35F4EDA8-78B6-4598-AB84-226745D97974}

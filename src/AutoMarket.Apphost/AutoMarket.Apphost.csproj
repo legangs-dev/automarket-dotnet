@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AutoMarket.API\AutoMarket.API.csproj" />
     <ProjectReference Include="..\AutoMarket.DatabaseMigration\AutoMarket.DatabaseMigration.csproj" />
+    <ProjectReference Include="..\AutoMarket.WebApp\AutoMarket.WebApp.csproj" />
   </ItemGroup>
 
 </Project>
